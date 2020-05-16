@@ -24,11 +24,12 @@ deviceCli.connect()
 while True:
         T=50;
         H=32;
+	ot=45
         #Send Temperature & Humidity to IBM Watson
-        data = {'d':{ 'Temperature' : T, 'Humidity': H }}
+        data = {'d':{ 'Temperature' : T, 'Humidity': H,'objTemp':ot }}
         #print data
         def myOnPublishCallback():
-            print ("Published Temperature = %s C" % T, "Humidity = %s %%" % H, "to IBM Watson")
+            print (data, "to IBM Watson")
 
         success = deviceCli.publishEvent("event", "json", data, qos=0, on_publish=myOnPublishCallback)
         if not success:
