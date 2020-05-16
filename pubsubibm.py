@@ -12,11 +12,10 @@ authToken = "testing1234"#repalce with token
 
 def myCommandCallback(cmd):
         print("Command received: %s" % cmd.data)        
-        if cmd.command == "lighton":
-            print("lighton")
-        elif cmd.command == "lightoff":
-            print("lighton")
-
+        if cmd.data['command']=='lighton':
+                print("LIGHT ON")
+        elif cmd.data['command'] == 'lightoff':
+            print("LIGHT OFF")
                 
 try:
 	deviceOptions = {"org": organization, "type": deviceType, "id": deviceId, "auth-method": authMethod, "auth-token": authToken}
