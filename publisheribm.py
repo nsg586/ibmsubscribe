@@ -25,7 +25,7 @@ while True:
         T=50;
         H=32;
         #Send Temperature & Humidity to IBM Watson
-        data = { 'Temperature' : T, 'Humidity': H }
+        data = ('d':{ 'Temperature' : T, 'Humidity': H }}
         #print data
         def myOnPublishCallback():
             print ("Published Temperature = %s C" % T, "Humidity = %s %%" % H, "to IBM Watson")
