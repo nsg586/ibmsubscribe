@@ -3,17 +3,7 @@ import sys
 import ibmiotf.application
 import ibmiotf.device
 import random
-'''Organization ID
-gpb305
-Device Type
-testingcode
-Device ID
-testing123
-Authentication Method
-use-token-auth
-Authentication Token
-testing1234
-'''
+
 #Provide your IBM Watson Device Credentials
 organization = "gpb305"
 deviceType = "testingcode"
