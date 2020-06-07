@@ -4,19 +4,19 @@ import ibmiotf.application # to install pip install ibmiotf
 import ibmiotf.device
 
 #Provide your IBM Watson Device Credentials
-organization = "Org ID" #replace the ORG ID
-deviceType = "Device Type"#replace the Device type wi
-deviceId = "Device ID"#replace Device ID
-authMethod = "token"
-authToken = "authtoken" #Replace the authtoken
+organization = "loc9vd" #replace the ORG ID
+deviceType = "motor"#replace the Device type wi
+deviceId = "2"#replace Device ID
+authMethod = "use-token-auth"
+authToken = "12345678" #Replace the authtoken
 
 def myCommandCallback(cmd): # function for Callback
         print("Command received: %s" % cmd.data)
-        if cmd.data['command']=='lighton':
-                print("LIGHT ON IS RECEIVED")
+        if cmd.data['command']=='motoron':
+                print("motor ON IS RECEIVED")
                           
-        elif cmd.data['command']=='lightoff':
-                print("LIGHT OFF IS RECEIVED")
+        elif cmd.data['command']=='motoroff':
+                print("motor OFF IS RECEIVED")
                 
         if cmd.command == "setInterval":
                 
